@@ -9,7 +9,7 @@ import { resolve } from "path";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd()); // 取得依照build的環境，取得env資料
   return {
-    base: "/game_demo/", // 設置基礎路徑 為了配合github action
+    base: "/h5_games_demo/", // 設置基礎路徑 為了配合github action
     plugins: [
       vue({
         template: { transformAssetUrls },

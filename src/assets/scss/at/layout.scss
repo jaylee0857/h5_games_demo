@@ -1,0 +1,68 @@
+$menu-bottom-text: #abacac;
+$menu-bottom-text-active: #fff;
+
+.layout-at {
+  position: fixed;
+  padding-bottom: 75px;
+  width: 100%;
+  height: 100%;
+  background-image: url("@/assets/images/at/10114.jpg");
+  background-size: 100% 100%;
+  &-actions {
+    position: fixed;
+    padding: 0 1.5rem;
+    width: 100%;
+    height: 75px;
+    bottom: 0;
+    background: #0c1429;
+    backdrop-filter: blur(30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    &-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &-icon {
+        transition: all ease 0.5s;
+        width: 40px;
+        height: 40px;
+        // width: 38px;
+        // height: 48px;
+        margin-bottom: 0.2rem;
+        &-active {
+          transition: all ease 0.5s;
+          transform: scale(1.35);
+          // scale: 1.35;
+        }
+        &-discount {
+          position: relative;
+          bottom: 1rem;
+        }
+        &-depositwithdrawal {
+          scale: 1.75;
+          position: relative;
+          bottom: 0.5rem;
+        }
+      }
+      &-text {
+        font-size: 0.75rem;
+        color: $menu-bottom-text;
+        &-active {
+          color: $menu-bottom-text-active;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: linear-gradient(to right, #1b1e1a, #3aa2ec, #1c1e1c);
+    }
+  }
+}

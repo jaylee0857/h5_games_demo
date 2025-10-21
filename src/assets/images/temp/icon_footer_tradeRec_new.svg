@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48.3 49.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        display: none;
+      }
+    </style>
+  </defs>
+  <g class="cls-2">
+    <g id="_圓角矩形_2" data-name="圓角矩形 2">
+      <path class="cls-1" d="M41.5,4.7c1.3,0,2.4,1.1,2.4,2.4v37.8c0,1.3-1.1,2.4-2.4,2.4H7.7c-1.3,0-2.4-1.1-2.4-2.4V7.1c0-1.3,1.1-2.4,2.4-2.4h33.8M41.5,2.7H7.7c-2.5,0-4.4,2-4.4,4.4v37.8c0,2.5,2,4.4,4.4,4.4h33.8c2.5,0,4.4-2,4.4-4.4V7.1c0-2.5-1.9-4.4-4.4-4.4h0Z"/>
+    </g>
+    <g id="_矩形_1" data-name="矩形 1">
+      <rect class="cls-1" x="13.5" y="15.1" width="22.5" height="2.2"/>
+    </g>
+    <g id="_矩形_1_拷貝" data-name="矩形 1 拷貝">
+      <rect class="cls-1" x="13.5" y="24.9" width="22.5" height="2.2"/>
+    </g>
+    <g id="_矩形_1_拷貝_2" data-name="矩形 1 拷貝 2">
+      <rect class="cls-1" x="13.5" y="34.7" width="13.3" height="2.2"/>
+    </g>
+  </g>
+  <g>
+    <path class="cls-1" d="M41.3,2.7H7.9c-2.6,0-4.6,2-4.6,4.6v37.4c0,2.6,2,4.6,4.6,4.6h33.4c2.6,0,4.6-2,4.6-4.6V7.3c0-2.6-2-4.6-4.6-4.6ZM43.4,44.7c0,1.2-1,2.1-2.1,2.1H7.9c-1.2,0-2.1-1-2.1-2.1V7.3c0-1.2,1-2.1,2.1-2.1h33.4c1.2,0,2.1,1,2.1,2.1v37.4Z"/>
+    <rect class="cls-1" x="13.4" y="15" width="22.8" height="2.7"/>
+    <rect class="cls-1" x="13.4" y="24.7" width="22.8" height="2.7"/>
+    <rect class="cls-1" x="13.4" y="34.4" width="13.7" height="2.7"/>
+  </g>
+</svg>

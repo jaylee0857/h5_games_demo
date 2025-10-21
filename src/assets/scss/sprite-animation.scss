@@ -1,0 +1,20 @@
+.sprite-animation {
+  height: 40px;
+  width: 22px;
+  overflow: hidden;
+  &-num-wrap {
+    transform: translateY(0px);
+    transition: all 1s ease-out 0s;
+  }
+  &-num {
+    transition: all 1s ease-out 0s;
+    height: 40px;
+    font-family: "TypoDigitItalic";
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom, #fff, #89f7fe, #27f7ff);
+    background: -webkit-linear-gradient(to bottom, #fff, #89f7fe, #27f7ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}

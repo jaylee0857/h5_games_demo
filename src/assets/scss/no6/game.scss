@@ -1,0 +1,201 @@
+.game {
+  display: flex;
+  // padding-top: 0.4rem;
+  padding: 0 3%;
+  height: 100%;
+  padding-bottom: calc(70px + 0.2rem);
+
+  // overflow: hidden;
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    overflow-y: scroll;
+    &.none::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+      // border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &.none::-webkit-scrollbar {
+      width: 3px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &.none::-webkit-scrollbar-thumb {
+      // border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.2rem;
+      width: 1rem;
+      min-width: 58px;
+      height: 1.05rem;
+      min-height: 1.05rem;
+      font-size: 0.2rem;
+      color: #5b4f4f;
+      // background-size: cover;
+      background-size: 100% 100%;
+      // background-image: url('@/assets/images/game/game_bg_normal.png');
+      // background-image: url("@/assets/images/game/background_left_btn_newyear.png");
+      background-position: bottom;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s;
+      .icon {
+        position: relative;
+        width: 0.84rem;
+        height: 0.84rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .icon.football //足球
+      {
+        // background-image: url("@/assets/images/game/game_ty_icon_normal.png");
+      }
+      .icon.football.active //金足球
+      {
+        // background-image: url("@/assets/images/game/game_ty_icon_selected.webp");
+      }
+      .icon.realMan //真人 骰子
+      {
+        // background-image: url("@/assets/images/game/game_zr_icon_normal.png");
+      }
+      .icon.realMan.active //金骰子
+      {
+        // background-image: url("@/assets/images/game/game_zr_icon_selected.webp");
+      }
+      .icon.cards //棋牌
+      {
+        // background-image: url("@/assets/images/game/game_qp_icon_normal.png");
+      }
+      .icon.cards.active //金棋牌
+      {
+        // background-image: url("@/assets/images/game/game_qp_icon_selected.webp");
+      }
+      .icon.gaming //電競 搖桿
+      {
+        // background-image: url("@/assets/images/game/game_dj_icon_normal.png");
+      }
+      .icon.gaming.active //金搖桿
+      {
+        // background-image: url("@/assets/images/game/game_dj_icon_selected.webp");
+      }
+      .icon.lottery //彩票
+      {
+        // background-image: url("@/assets/images/game/game_cp_icon_normal.png");
+      }
+      .icon.lottery.active //彩票 金撞球
+      {
+        // background-image: url("@/assets/images/game/game_cp_icon_selected.webp");
+      }
+      .icon.electronic //電子 拉霸
+      {
+        // background-image: url("@/assets/images/game/game_by_icon_normal.png");
+      }
+      .icon.electronic.active //金拉霸
+      {
+        // background-image: url("@/assets/images/game/game_by_icon_selected.webp");
+      }
+      .icon.fishing //釣魚
+      {
+        // background-image: url("@/assets/images/game/game_fi_icon_normal.png");
+      }
+      .icon.fishing.active //金釣魚
+      {
+        // background-image: url("@/assets/images/game/game_fi_icon_selected.png");
+      }
+      span {
+        white-space: nowrap;
+      }
+      .en__font {
+        font-size: 0.17rem;
+      }
+      .item__text {
+        margin-bottom: 0.05rem;
+      }
+    }
+    .item.active {
+      // background-image: url('@/assets/images/game/game_bg_active.png');
+      color: #fff;
+      // background-image: url("@/assets/images/game/background_left_btn_active_newyear.png");
+      background-size: 100% 100%;
+    }
+  }
+  .main {
+    padding-left: 5px;
+    width: calc(100% - 80px);
+    height: 100%;
+    .item {
+      display: flex;
+      height: 157px;
+      background-repeat: no-repeat;
+      background-color: #453c54;
+      border-radius: 5px;
+      background-position: right;
+      background-size: cover;
+      p {
+        width: 50%;
+        height: 25px;
+        background: linear-gradient(to right, #DE76D9, #453E97);
+        /* 其他必要的樣式，例如高度和寬度 */
+        color: white; /* 文字顏色 */
+        display: flex; /* 使用flex布局 */
+        align-items: center; /* 垂直居中對齊 */
+        justify-content: center; /* 水平居中對齊 */
+        text-align: center; /* 文字居中 */
+        border-radius:  5px 0 5px 0;
+        font-weight: bold;
+        margin-right: 4px;
+      }
+      .logo {
+        padding: 3px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+  .reget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.01rem;
+    width: 82%;
+    height: 100%;
+    font-size: 0.3rem;
+    & > span {
+      padding: 0.1rem 0.2rem;
+    }
+    & > span:nth-child(1) {
+      font-size: 0.28rem;
+    }
+    & > span:nth-child(2) {
+      color: #fff;
+      border-radius: 6px;
+      // background: url("@/assets/images/home/vip_1s.png") no-repeat center / cover;
+      // background: linear-gradient(to right, rgba(127, 170, 242, 1) 0%, rgba(82, 111, 232, 1) 100%);
+    }
+  }
+}
+
+
+
+@media (max-width: 420px) {
+  .game {
+    .sidebar {
+      .item {
+        min-height: 1.1rem;
+      }
+    }
+  }
+}

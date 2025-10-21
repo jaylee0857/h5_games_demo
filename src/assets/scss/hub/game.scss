@@ -1,0 +1,126 @@
+.game {
+  display: flex;
+  padding-top: 0.2rem;
+  height: 100%;
+  // overflow: hidden;
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    height: 100%;
+    overflow-y: scroll;
+    &.none::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+      // border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &.none::-webkit-scrollbar {
+      width: 3px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &.none::-webkit-scrollbar-thumb {
+      // border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.2rem;
+      width: 1rem;
+      min-width: 58px;
+      height: 1.05rem;
+      min-height: 1.05rem;
+      font-size: 0.2rem;
+      color: #5b4f4f;
+      // background-size: cover;
+      background-size: 100% 100%;
+      // background-image: url('@/assets/images/game/game_bg_normal.png');
+      // background-image: url("@/assets/images/game/background_left_btn_newyear.png");
+      background-position: bottom;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+  }
+  .main {
+    padding-left: 0.01rem;
+    width: calc( 100% - 80px);
+    height: 100%;
+    .platform_item {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #b2d2ed 0%, #d1e6f6 100%);
+      border-radius: 5px;
+      position: relative;
+      .platform_img {
+        width: 60%;
+        position: absolute;
+        right: 1%;
+        bottom: 0;
+      }
+      &>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        img {
+          height: 47px;
+          margin-top: -10px;
+        }
+      }
+    }
+    .platform_mode_2 {
+      width: 100%;
+      height: 50%;
+      .platform_item {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .reget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.01rem;
+    width: 82%;
+    height: 100%;
+    font-size: 0.3rem;
+    & > span {
+      padding: 0.1rem 0.2rem;
+    }
+    & > span:nth-child(1) {
+      font-size: 0.28rem;
+    }
+    & > span:nth-child(2) {
+      color: #fff;
+      border-radius: 6px;
+      // background: url("@/assets/images/home/vip_1s.png") no-repeat center / cover;
+      // background: linear-gradient(to right, rgba(127, 170, 242, 1) 0%, rgba(82, 111, 232, 1) 100%);
+    }
+  }
+}
+
+
+
+@media (max-width: 420px) {
+  .game {
+    .sidebar {
+      .item {
+        min-height: 1.1rem;
+      }
+    }
+  }
+}

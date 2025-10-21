@@ -1,0 +1,454 @@
+html,
+body {
+  // height: 100%;
+  font-family: "Times New Roman", "微軟正黑體", Microsoft JhengHei, Tahoma, Geneva, Verdana, sans-serif;
+  // overflow: hidden;
+}
+
+#app {
+  // height: 100vh;
+  // min-height: 100%;
+  // overflow: hidden;
+}
+
+.bottom-nav {
+  @apply flex flex-shrink-0 flex-grow-0 justify-around items-center;
+
+  height: 0.9rem;
+  // background-image: url("./images/bottom_background.png");
+  background-repeat: no-repeat;
+  background-size: 7.5rem 1.26rem;
+
+  &__item {
+    // @apply flex justify-center items-center flex-1;
+    @apply flex justify-center items-center ;
+    padding-top: 0.45rem;
+    // text-shadow: 0 0 0.1rem #000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 0.4rem 0.4rem;
+
+    &--active {
+      @apply font-normal;
+
+      color: #4a70f1;
+    }
+
+    &--home {
+      background-image: url("@/assets/images/temp/icon_footer_tradeRec_new.svg");
+
+      // background: url("https://www.newtha.com/Mobile/images/yn/icon_footer_tradeRec_new.svg") no-repeat top;
+      // width: 22px;
+      // height: 22px;
+    }
+    &--wallet {
+      background-image: url("@/assets/images/temp/icon_footer_DW.svg");
+      background-size: 0.7rem 0.7rem;
+      padding-top: 0.7rem;
+      width: 0.7rem;
+      margin-top: -12px;
+
+    }
+    &--discount {
+      background-image: url("@/assets/images/temp/icon_footer_gift01.png");
+    }
+    &--service {
+      background-image: url("@/assets/images/temp/icon_footer_service_new.svg");
+    }
+    &--account {
+      background-image: url("@/assets/images/temp/icon_footer_member.svg");
+
+    }
+  }
+}
+
+.home {
+  @apply flex flex-col;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 1.26rem;
+  width: 100%;
+  // background-image: url("./images/home/home_background.png");
+  background-repeat: no-repeat;
+  background-position: center -0.46rem;
+  background-size: 11.5rem 4rem;
+  &__header {
+    padding: 0 2%;
+    @apply flex-shrink-0 flex-grow-0 flex justify-between items-center ;
+    background: linear-gradient(90deg, #4e65ff, #74e7fb 68%, #688ffc);
+    height: 40px;
+    // background-image: url("./images/home/home_logo.png");
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: 2.74rem 0.76rem;
+    &.demo {
+      // background-image: url("./images/home/pro168_logo_little.png");
+      background-size: 2.74rem 0.55rem;
+    }
+    &.ko {
+      // background-image: url("./images/home/ko168_logo.png");
+      background-size: 2.74rem 0.55rem;
+    }
+    &.phivip {
+      // background-image: url("./images/home/phivip_logo.png");
+      background-size: 2.74rem 0.55rem;
+    }
+  }
+  &__message {
+    @apply flex-shrink-0 flex-grow-0;
+
+    width: 0.7rem;
+    height: 0.7rem;
+    background-image: url("./images/home/home_icon_message.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.7rem 0.7rem;
+  }
+  &__banner {
+    @apply flex-shrink-0 flex-grow-0;
+    padding: 2%;
+
+    //height: 2.75rem;
+    // padding: 0 0.25rem;
+
+    &__inner {
+      overflow: hidden;
+      border-radius: 0.2rem;
+    }
+  }
+
+  &__marquee {
+    @apply flex-shrink-0 flex-grow-0 text-24;
+
+    height: 0.76rem;
+    padding: 0.2rem 0.35rem;
+    color: #9ca3bf;
+    background: #fff;
+    &__inner {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__action {
+    @apply flex-shrink-0 flex-grow-0 flex;
+
+    padding: 0 0.35rem;
+
+    &__link {
+      @apply flex-1 flex text-30 justify-center items-center;
+
+      height: 0.96rem;
+      background-repeat: no-repeat;
+      background-size: 3.32rem 0.96rem;
+
+      &--login {
+        color: white;
+        background-image: url("./images/home/btn_icon_login.png");
+        background-position: left center;
+      }
+      &--register {
+        color: black;
+        background-image: url("./images/home/btn_icon_register.png");
+        background-position: right center;
+        &.ph {
+          white-space: pre
+        }
+      }
+    }
+  }
+
+  &__game {
+    @apply flex-1;
+    padding: 0 2%;
+
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.swal2-wrap {
+  // max-width: 300px;
+  // max-height: 120px;
+  // font-size: 16px !important;
+  font-size: 0.2rem !important;
+}
+
+.swal2-popup {
+  font-size: 0.1rem;
+}
+.swal2-popup.swal2-toast {
+  box-shadow: none;
+  animation-duration: 0.5s;
+}
+.swal2-popup.swal2-toast #swal2-title {
+  font-size: 0.36rem;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  min-width: 40%;
+  margin: 0 auto;
+}
+.swal2-popup.swal2-loading {
+  box-shadow: none;
+  animation-duration: 0.3s;
+}
+.swal2-popup.swal2-loading #swal2-title {
+  font-size: 0.24rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  width: 2.5rem;
+  margin: 0 auto;
+  padding-top: 1.2rem;
+  background: rgba(0, 0, 0, 0.7) url("@/assets/images/loading.gif") no-repeat center 0.3rem;
+  background-size: 0.7rem auto;
+}
+.swal2-popup.swal2-alert,
+.swal2-popup.swal2-confirm {
+  animation-duration: 0.5s;
+  width: 84%;
+  padding-bottom: 0;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.25);
+  .swal2-title {
+    font-size: 0.4rem;
+  }
+  .swal2-html-container {
+    font-size: 0.3rem;
+    padding: 0.2rem;
+    margin: 0;
+  }
+  .swal2-actions {
+    width: 100%;
+    border-top: 1px solid #eee;
+    .swal2-styled {
+      flex: 1;
+      background-color: #fff;
+      color: #526fe8;
+      font-size: 0.35rem;
+      padding: 0.2rem;
+      margin: 0;
+      &.swal2-cancel {
+        color: #333 !important;
+      }
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+.swal2-popup.swal2-alert.pre {
+  .swal2-html-container {
+    white-space: pre;
+  }
+}
+
+.swal2-popup.swal2-alert.block {
+  color: #fff;
+  border-radius:8px;
+  overflow: hidden;
+  .swal2-title {
+    background: #000000;
+    border-bottom: 1px solid #383838;
+  }
+  .swal2-html-container {
+    background: #000000;
+  }
+  .swal2-confirm.swal2-styled{
+    margin-top: -0.1rem;
+    background: linear-gradient(180deg, #F36040 0%, #DF0C0C 100%);
+    color: #fff;
+  }
+  .swal2-actions {
+    margin-top: 0;
+  }
+  .swal2-html-container {
+    padding: 0.3rem 0.2rem;
+  }
+}
+
+.layout-login {
+  background-image: url("./images/login/login_background.png");
+  background-size: cover;
+}
+
+.login {
+  padding-top: 1.5rem;
+
+  &__header {
+    height: 1rem;
+    background-image: url("./images/login/login_logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3.36rem 0.7161rem;
+    &.demo {
+      background-image: url("./images/home/pro168_logo.png");
+      background-size: 3.36rem 0.7161rem;
+    }
+    &.ko {
+      background-image: url("./images/home/ko168_logo.png");
+      background-size: 3.36rem 0.7161rem;
+    }
+    &.phivip {
+      background-image: url("./images/home/phivip_logo.png");
+      background-size: 3.36rem 0.7161rem;
+    }
+  }
+
+  &__title {
+    @apply flex justify-center items-center font-semibold;
+
+    letter-spacing: 0.1rem;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      width: 0.7rem;
+      height: 1px;
+      margin: 0 0.7rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      content: "";
+    }
+  }
+
+  &__control {
+    @apply flex items-center bg-black bg-opacity-40 rounded-full;
+
+    padding-left: 0.9rem;
+    background-repeat: no-repeat;
+    background-position: 0.3rem center;
+    background-size: 0.46rem 0.46rem;
+    border: 0.5px solid #ffbf12;
+
+    &__input {
+      @apply w-full bg-transparent text-white text-28 px-5 py-8 focus:outline-none;
+    }
+
+    &--username {
+      background-image: url("./images/login/icon_id.png");
+    }
+    &--password {
+      background-image: url("./images/login/icon_password.png");
+    }
+    &--captcha {
+      background-image: url("./images/login/icon_captcha.png");
+    }
+    &--phone {
+      background-image: url("./images/login/icon_phone.png");
+    }
+  }
+
+  &__submit {
+    @apply flex justify-center items-center text-28 text-white rounded-full py-7 cursor-pointer;
+
+    // background-image: linear-gradient(to right, #74aef8, #4a70f1);
+    background-color: #bc0000;
+
+    &--disabled {
+      // @apply bg-gray-400 bg-opacity-80 bg-none;
+      background-color: rgba($color: #bc0000, $alpha: 0.3);
+    }
+  }
+}
+
+.layout-trade {
+  // background: #f8f8f8;
+  // overflow-y: overlay;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  // max-height: -webkit-fill-available; //a
+  background: #f8f8f8;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.1rem;
+    height: 7.5%;
+    min-height: 1.2rem;
+    font-size: 0.35rem;
+    border-bottom: 1px solid #c3c3c3;
+    background: #fff;
+    .title {
+      padding: 0 0.3rem;
+      overflow: hidden;
+      white-space: nowrap; //強制不換行
+      text-overflow: ellipsis; //文字超出範圍後，多出的部分以...呈現
+    }
+  }
+  .go__back {
+    width: 0.45rem;
+    height: 0.45rem;
+    // background-image: url("@/assets/images/trade/icon_back.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/** scroll picker */
+.scroll-picker-container {
+  .column-container {
+    width: 100%;
+    text-align: center;
+  }
+  .center-overlay-custom {
+    @apply bg-black bg-opacity-10 rounded-sm mx-3;
+
+    border-width: 0;
+  }
+}
+
+.color-base {
+  color: #424553;
+}
+
+.container__trade {
+  overflow-y: overlay;
+  height: 90.5%;
+  width: 100%;
+}
+
+//隱藏自動填充背景色
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fafafa;
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.service-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &-icon {
+    display: block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &.line //line
+    {
+      // background-image: url("@/assets/images/icon_cus_line.png");
+    }
+    &.zalo //zalo
+    {
+      // background-image: url("@/assets/images/icon_cus_zalo.png");
+    }
+    &.telegram //talegram
+    {
+      // background-image: url("@/assets/images/icon_btn_tg.png");
+    }
+    &.kakao //kakao
+    {
+      // background-image: url("@/assets/images/icon_btn_kakao.png");
+    }
+  }
+}
